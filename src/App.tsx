@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Download, BookOpen, Star, Smartphone, Bot, Calendar, Video, FileText, Award, MessageCircle, Zap } from 'lucide-react';
+import { Download, BookOpen, Star, Smartphone, Bot, Calendar, Video, FileText, Award, MessageCircle, Zap, Target, Play, Users, TrendingUp, Shield } from 'lucide-react';
 
 function App() {
   const [isDownloading, setIsDownloading] = useState(false);
@@ -22,117 +22,166 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-violet-50" dir="rtl">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" dir="rtl">
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-sm border-b border-purple-100 sticky top-0 z-50">
+      <header className="bg-black/20 backdrop-blur-xl border-b border-white/10 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-reverse space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-violet-600 rounded-xl flex items-center justify-center">
-                <BookOpen className="w-6 h-6 text-white" />
+          <div className="flex justify-between items-center h-20">
+            <div className="flex items-center space-x-reverse space-x-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg shadow-purple-500/25">
+                <BookOpen className="w-7 h-7 text-white" />
               </div>
-              <h1 className="text-xl font-bold text-gray-900">تطبيق الباكالوريا</h1>
+              <div>
+                <h1 className="text-2xl font-black text-white bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">SmartBacDz APK</h1>
+                <p className="text-xs text-gray-400 font-medium">تطبيق الباكالوريا الذكي</p>
+              </div>
             </div>
             <nav className="hidden md:flex items-center space-x-reverse space-x-8">
-              <a href="#features" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">المميزات</a>
-              <a href="#download" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">التحميل</a>
-              <a href="#about" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">حول التطبيق</a>
+              <a href="#features" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-semibold hover:scale-105">المميزات</a>
+              <a href="#download" className="text-gray-300 hover:text-purple-400 transition-all duration-300 font-semibold hover:scale-105">التحميل</a>
+              <a href="#about" className="text-gray-300 hover:text-pink-400 transition-all duration-300 font-semibold hover:scale-105">حول التطبيق</a>
             </nav>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-16 pb-24">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-violet-600/10"></div>
+      <section className="relative overflow-hidden pt-20 pb-32">
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-violet-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+          <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+          <div className="absolute top-40 right-10 w-96 h-96 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-8 left-20 w-96 h-96 bg-gradient-to-r from-violet-500/30 to-purple-500/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
         </div>
+        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 bg-purple-100 rounded-full text-purple-800 text-sm font-medium mb-8">
-              <Star className="w-4 h-4 ml-2" />
-              الإصدار الأول متاح الآن
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-xl rounded-full text-cyan-300 text-sm font-bold mb-8 border border-cyan-500/30">
+              <Star className="w-5 h-5 ml-2 animate-pulse" />
+              الإصدار الأول • 13 ميجابايت • مجاني تماماً
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              تطبيق <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-violet-600">الباكالوريا</span> الشامل
+            
+            <h1 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight">
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">SmartBacDz</span>
+              <br />
+              <span className="text-3xl md:text-5xl font-bold text-gray-300">تطبيق الباكالوريا الثوري</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              التطبيق الأول والأشمل للطلاب الجزائريين في الباكالوريا مع الذكاء الاصطناعي. كل ما تحتاجه للنجاح في امتحان الباكالوريا في مكان واحد
+            
+            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed font-medium">
+              أول تطبيق جزائري مدعوم بالذكاء الاصطناعي للباكالوريا. 
+              <span className="text-cyan-400 font-bold"> كل ما تحتاجه للنجاح</span> في مكان واحد
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
               <button 
                 onClick={handleDownloadAPK}
                 disabled={isDownloading}
-                className="bg-gradient-to-r from-purple-600 to-violet-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center disabled:opacity-70 disabled:cursor-not-allowed group"
+                className="group relative bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl shadow-purple-500/25 hover:shadow-cyan-500/25 transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 flex items-center disabled:opacity-70 disabled:cursor-not-allowed overflow-hidden"
               >
-                {isDownloading ? (
-                  <>
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white ml-2"></div>
-                    جاري التحميل...
-                  </>
-                ) : (
-                  <>
-                    <Download className="w-5 h-5 ml-2 group-hover:animate-bounce" />
-                    تحميل APK مباشر
-                  </>
-                )}
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative flex items-center">
+                  {isDownloading ? (
+                    <>
+                      <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white ml-3"></div>
+                      جاري التحميل...
+                    </>
+                  ) : (
+                    <>
+                      <Download className="w-6 h-6 ml-3 group-hover:animate-bounce" />
+                      تحميل APK (13 MB)
+                    </>
+                  )}
+                </div>
               </button>
-              <button className="border-2 border-purple-300 text-purple-700 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-50 transition-colors">
-                شاهد الفيديو التوضيحي
+              
+              <button className="group border-2 border-cyan-400/50 text-cyan-300 px-10 py-5 rounded-2xl font-bold text-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 flex items-center backdrop-blur-xl">
+                <Play className="w-6 h-6 ml-3 group-hover:scale-110 transition-transform" />
+                شاهد العرض التوضيحي
               </button>
             </div>
-            <div className="mt-4 text-sm text-gray-500">
-              * التطبيق غير متوفر حالياً في Google Play Store
+            
+            <div className="flex justify-center items-center space-x-reverse space-x-8 text-sm text-gray-400">
+              <div className="flex items-center">
+                <Shield className="w-4 h-4 ml-2 text-green-400" />
+                آمن 100%
+              </div>
+              <div className="flex items-center">
+                <Users className="w-4 h-4 ml-2 text-blue-400" />
+                +10,000 طالب
+              </div>
+              <div className="flex items-center">
+                <TrendingUp className="w-4 h-4 ml-2 text-purple-400" />
+                تحديثات مستمرة
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* App Preview */}
-      <section className="py-16 bg-white">
+      <section className="py-24 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              واجهة سهلة الاستخدام
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">تصميم مستقبلي</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              تصميم عصري وبديهي يجعل التعلم أكثر متعة وفعالية
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto font-medium">
+              واجهة عصرية وذكية تجعل التعلم تجربة ممتعة ومثيرة
             </p>
           </div>
-          <div className="flex justify-center">
-            <div className="relative">
-              <div className="w-80 h-96 bg-gradient-to-br from-purple-600 to-violet-600 rounded-3xl shadow-2xl transform rotate-6 opacity-20"></div>
-              <div className="absolute -top-8 -right-8 w-80 h-96 bg-gradient-to-br from-purple-500 to-violet-500 rounded-3xl shadow-2xl p-6">
-                <div className="flex items-center justify-between mb-6">
+          
+          <div className="flex justify-center relative">
+            <div className="relative group">
+              {/* Background phones for depth */}
+              <div className="absolute -top-4 -right-4 w-80 h-[500px] bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-[3rem] transform rotate-12 blur-sm"></div>
+              <div className="absolute -top-2 -right-2 w-80 h-[500px] bg-gradient-to-br from-cyan-600/30 to-purple-600/30 rounded-[3rem] transform rotate-6 blur-sm"></div>
+              
+              {/* Main phone */}
+              <div className="relative w-80 h-[500px] bg-gradient-to-br from-slate-800 to-slate-900 rounded-[3rem] shadow-2xl shadow-purple-500/25 border border-gray-700/50 p-6 group-hover:scale-105 transition-transform duration-500">
+                {/* Phone header */}
+                <div className="flex items-center justify-between mb-8">
                   <div className="flex space-x-reverse space-x-2">
-                    <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                    <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                    <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                    <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse animation-delay-2000"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse animation-delay-4000"></div>
                   </div>
-                  <Smartphone className="w-6 h-6 text-white/80" />
+                  <Smartphone className="w-6 h-6 text-gray-400" />
                 </div>
-                <div className="text-white">
-                  <h3 className="text-xl font-bold mb-4">مرحباً بك في تطبيق الباكالوريا</h3>
+                
+                {/* Phone content */}
+                <div className="text-white space-y-4">
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-black bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">SmartBacDz</h3>
+                    <p className="text-gray-400 text-sm">مرحباً بك في المستقبل</p>
+                  </div>
+                  
                   <div className="space-y-3">
-                    <div className="bg-white/20 rounded-lg p-3 backdrop-blur-sm">
+                    <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-4 backdrop-blur-xl border border-cyan-500/30 hover:border-cyan-400/50 transition-colors">
                       <div className="flex items-center">
-                        <Bot className="w-5 h-5 ml-3" />
-                        <span className="font-medium">ذكاء اصطناعي</span>
+                        <Bot className="w-6 h-6 ml-3 text-cyan-400" />
+                        <div>
+                          <span className="font-bold text-white">مساعد ذكي</span>
+                          <p className="text-xs text-gray-400">AI متطور</p>
+                        </div>
                       </div>
                     </div>
-                    <div className="bg-white/20 rounded-lg p-3 backdrop-blur-sm">
+                    
+                    <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl p-4 backdrop-blur-xl border border-purple-500/30 hover:border-purple-400/50 transition-colors">
                       <div className="flex items-center">
-                        <FileText className="w-5 h-5 ml-3" />
-                        <span className="font-medium">مواضيع 2010-2025</span>
+                        <FileText className="w-6 h-6 ml-3 text-purple-400" />
+                        <div>
+                          <span className="font-bold text-white">مواضيع شاملة</span>
+                          <p className="text-xs text-gray-400">2010-2025</p>
+                        </div>
                       </div>
                     </div>
-                    <div className="bg-white/20 rounded-lg p-3 backdrop-blur-sm">
+                    
+                    <div className="bg-gradient-to-r from-pink-500/20 to-red-500/20 rounded-2xl p-4 backdrop-blur-xl border border-pink-500/30 hover:border-pink-400/50 transition-colors">
                       <div className="flex items-center">
-                        <Video className="w-5 h-5 ml-3" />
-                        <span className="font-medium">فيديوهات تعليمية</span>
+                        <Video className="w-6 h-6 ml-3 text-pink-400" />
+                        <div>
+                          <span className="font-bold text-white">فيديوهات HD</span>
+                          <p className="text-xs text-gray-400">شرح مفصل</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -144,114 +193,82 @@ function App() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-gradient-to-br from-purple-50 to-violet-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              مميزات التطبيق الثورية
+      <section id="features" className="py-24 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">مميزات ثورية</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              تطبيق شامل مدعوم بالذكاء الاصطناعي لضمان تفوقك في الباكالوريا
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto font-medium">
+              تقنيات متطورة ومميزات حصرية لضمان تفوقك في الباكالوريا
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Feature 1 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100 hover:border-purple-300">
-              <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center mb-4">
-                <Bot className="w-7 h-7 text-white" />
+            <div className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/25">
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25">
+                <Bot className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">مساعد ذكي بالذكاء الاصطناعي</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                نموذج ذكاء اصطناعي متطور يجيب على جميع أسئلتك ويساعدك في فهم أي درس أو مفهوم صعب
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">مساعد ذكي متطور</h3>
+              <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                نموذج ذكاء اصطناعي من الجيل الجديد يفهم أسئلتك ويقدم إجابات دقيقة ومفصلة لكل المواد
               </p>
             </div>
 
             {/* Feature 2 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100 hover:border-purple-300">
-              <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center mb-4">
-                <FileText className="w-7 h-7 text-white" />
+            <div className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/25">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-violet-500 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-500/25">
+                <FileText className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">مواضيع الباكالوريا 2010-2025</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                أرشيف كامل لجميع مواضيع الباكالوريا من 2010 إلى 2025 لكل الشعب والمواد مع الحلول النموذجية
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">أرشيف شامل 2010-2025</h3>
+              <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                مكتبة ضخمة تضم جميع مواضيع الباكالوريا مع الحلول النموذجية والتصحيحات المفصلة
               </p>
             </div>
 
             {/* Feature 3 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100 hover:border-purple-300">
-              <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center mb-4">
-                <BookOpen className="w-7 h-7 text-white" />
+            <div className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-pink-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-pink-500/25">
+              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-red-500 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-pink-500/25">
+                <Video className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">موسوعة الدروس والملخصات</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                مكتبة ضخمة من الدروس المفصلة والملخصات المركزة والاختبارات التفاعلية لجميع المواد
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-pink-400 transition-colors">فيديوهات عالية الجودة</h3>
+              <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                شروحات مرئية بجودة HD من أفضل الأساتذة مع تقنيات تعليمية حديثة وتفاعلية
               </p>
             </div>
 
             {/* Feature 4 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100 hover:border-purple-300">
-              <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center mb-4">
-                <Calendar className="w-7 h-7 text-white" />
+            <div className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-green-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-500/25">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-green-500/25">
+                <Calendar className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">جدول تنظيم الوقت الذكي</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                منظم ذكي لجدولة أوقات الدراسة والمراجعة مع تذكيرات وإحصائيات تقدمك اليومي
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-green-400 transition-colors">منظم ذكي للوقت</h3>
+              <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                نظام تخطيط متقدم يحلل أداءك ويضع جدولاً مخصصاً لتحقيق أفضل النتائج
               </p>
             </div>
 
             {/* Feature 5 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100 hover:border-purple-300">
-              <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center mb-4">
-                <Video className="w-7 h-7 text-white" />
+            <div className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-yellow-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-yellow-500/25">
+              <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-yellow-500/25">
+                <Target className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">فيديوهات تعليمية منظمة</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                مكتبة فيديو ضخمة مرتبة حسب كل درس مع أفضل الأساتذة الجزائريين وشرح مبسط وواضح
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-yellow-400 transition-colors">اختبارات تكيفية</h3>
+              <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                نظام اختبارات ذكي يتكيف مع مستواك ويركز على نقاط الضعف لتحسين مستمر
               </p>
             </div>
 
             {/* Feature 6 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100 hover:border-purple-300">
-              <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center mb-4">
-                <Zap className="w-7 h-7 text-white" />
+            <div className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-indigo-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/25">
+              <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-indigo-500/25">
+                <Award className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">أسئلة ذكية وتقييم فوري</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                الذكاء الاصطناعي يولد أسئلة ذكية ويقيم إجاباتك فورياً مع تقديم الحل الصحيح والشرح المفصل
-              </p>
-            </div>
-
-            {/* Feature 7 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100 hover:border-purple-300">
-              <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center mb-4">
-                <Target className="w-7 h-7 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">اختبارات تفاعلية متقدمة</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                اختبارات ذكية تتكيف مع مستواك وتركز على نقاط ضعفك لضمان تحسن مستمر
-              </p>
-            </div>
-
-            {/* Feature 8 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100 hover:border-purple-300">
-              <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center mb-4">
-                <Award className="w-7 h-7 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">نظام التحفيز والإنجازات</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                نظام نقاط وشارات تحفيزية لتتبع تقدمك وتحقيق أهدافك الدراسية بطريقة ممتعة
-              </p>
-            </div>
-
-            {/* Feature 9 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100 hover:border-purple-300">
-              <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center mb-4">
-                <MessageCircle className="w-7 h-7 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">دعم فوري ومساعدة 24/7</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                مساعد ذكي متاح على مدار الساعة للإجابة على استفساراتك وحل مشاكلك الدراسية
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-indigo-400 transition-colors">نظام الإنجازات</h3>
+              <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                تحديات يومية وشارات تحفيزية تجعل التعلم أكثر متعة وتشويقاً
               </p>
             </div>
           </div>
@@ -259,96 +276,123 @@ function App() {
       </section>
 
       {/* Download Section */}
-      <section id="download" className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-violet-600 rounded-3xl p-12 text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              ابدأ رحلة النجاح اليوم
+      <section id="download" className="py-24 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-2xl rounded-[3rem] p-16 border border-gray-700/50 shadow-2xl shadow-purple-500/25">
+            <h2 className="text-4xl md:text-5xl font-black mb-8">
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                ابدأ رحلة التفوق الآن
+              </span>
             </h2>
-            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              حمل التطبيق الآن واحصل على جميع الموارد التي تحتاجها للتفوق في امتحان الباكالوريا
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto font-medium leading-relaxed">
+              انضم إلى آلاف الطلاب الذين حققوا النجاح باستخدام SmartBacDz. 
+              <span className="text-cyan-400 font-bold"> التحميل مجاني بالكامل</span>
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
+            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-12">
               <button 
                 onClick={handleDownloadAPK}
                 disabled={isDownloading}
-                className="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center disabled:opacity-70 disabled:cursor-not-allowed group"
+                className="group relative bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white px-12 py-6 rounded-2xl font-black text-xl shadow-2xl shadow-purple-500/25 hover:shadow-cyan-500/25 transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 flex items-center disabled:opacity-70 disabled:cursor-not-allowed overflow-hidden"
               >
-                {isDownloading ? (
-                  <>
-                    <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-purple-600 ml-3"></div>
-                    جاري التحميل...
-                  </>
-                ) : (
-                  <>
-                    <Download className="w-6 h-6 ml-3 group-hover:animate-bounce" />
-                    تحميل APK مباشر
-                  </>
-                )}
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative flex items-center">
+                  {isDownloading ? (
+                    <>
+                      <div className="animate-spin rounded-full h-7 w-7 border-b-2 border-white ml-4"></div>
+                      جاري التحميل...
+                    </>
+                  ) : (
+                    <>
+                      <Download className="w-7 h-7 ml-4 group-hover:animate-bounce" />
+                      تحميل SmartBacDz APK
+                      <span className="text-sm opacity-75 mr-2">(13 MB)</span>
+                    </>
+                  )}
+                </div>
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors flex items-center">
-                <Video className="w-6 h-6 ml-3" />
-                شاهد العرض التوضيحي
+              
+              <button className="group border-2 border-cyan-400/50 text-cyan-300 px-12 py-6 rounded-2xl font-bold text-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 flex items-center backdrop-blur-xl">
+                <Play className="w-7 h-7 ml-4 group-hover:scale-110 transition-transform" />
+                مشاهدة العرض التوضيحي
               </button>
             </div>
             
-            <div className="text-sm opacity-75 space-y-1">
-              <div>متوفر مجاناً • الإصدار 1.0 • يتطلب Android 5.0+</div>
-              <div>⚠️ التطبيق غير متوفر حالياً في Google Play Store</div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+              <div className="flex items-center justify-center text-gray-400">
+                <Shield className="w-5 h-5 ml-2 text-green-400" />
+                <span>آمن ومضمون 100%</span>
+              </div>
+              <div className="flex items-center justify-center text-gray-400">
+                <Smartphone className="w-5 h-5 ml-2 text-blue-400" />
+                <span>يتطلب Android 5.0+</span>
+              </div>
+              <div className="flex items-center justify-center text-gray-400">
+                <Download className="w-5 h-5 ml-2 text-purple-400" />
+                <span>تحديثات مجانية مدى الحياة</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-br from-purple-50 to-violet-50">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="text-3xl font-bold text-purple-600 mb-2">1000+</div>
-              <div className="text-gray-600">درس وملخص</div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center group">
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-1">
+                <div className="text-4xl font-black bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-3">1500+</div>
+                <div className="text-gray-400 font-semibold group-hover:text-gray-300 transition-colors">درس وملخص شامل</div>
+              </div>
             </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="text-3xl font-bold text-purple-600 mb-2">15</div>
-              <div className="text-gray-600">سنة من المواضيع</div>
+            <div className="text-center group">
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-1">
+                <div className="text-4xl font-black bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-3">15</div>
+                <div className="text-gray-400 font-semibold group-hover:text-gray-300 transition-colors">سنة من المواضيع</div>
+              </div>
             </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="text-3xl font-bold text-purple-600 mb-2">500+</div>
-              <div className="text-gray-600">فيديو تعليمي</div>
+            <div className="text-center group">
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-pink-500/50 transition-all duration-300 hover:-translate-y-1">
+                <div className="text-4xl font-black bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent mb-3">800+</div>
+                <div className="text-gray-400 font-semibold group-hover:text-gray-300 transition-colors">فيديو تعليمي HD</div>
+              </div>
             </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="text-3xl font-bold text-purple-600 mb-2">24/7</div>
-              <div className="text-gray-600">مساعد ذكي</div>
+            <div className="text-center group">
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300 hover:-translate-y-1">
+                <div className="text-4xl font-black bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-3">24/7</div>
+                <div className="text-gray-400 font-semibold group-hover:text-gray-300 transition-colors">مساعد ذكي متاح</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-black/50 backdrop-blur-xl border-t border-gray-800/50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-reverse space-x-3 mb-4 md:mb-0">
-              <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-violet-600 rounded-xl flex items-center justify-center">
-                <BookOpen className="w-6 h-6 text-white" />
+          <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+            <div className="flex items-center space-x-reverse space-x-4 mb-6 md:mb-0">
+              <div className="w-14 h-14 bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg shadow-purple-500/25">
+                <BookOpen className="w-8 h-8 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold">تطبيق الباكالوريا</h3>
-                <p className="text-gray-400 text-sm">للطلاب الجزائريين</p>
+                <h3 className="text-2xl font-black bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">SmartBacDz APK</h3>
+                <p className="text-gray-400 font-medium">تطبيق الباكالوريا الذكي للطلاب الجزائريين</p>
               </div>
             </div>
             
             <div className="text-center md:text-left">
-              <p className="text-gray-400">
-                جميع الحقوق محفوظة © 2024 تطبيق الباكالوريا
+              <p className="text-gray-400 font-medium">
+                جميع الحقوق محفوظة © 2024 SmartBacDz
               </p>
             </div>
           </div>
           
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p className="text-gray-400 text-sm">
-              مصمم خصيصاً لطلاب الباكالوريا في الجزائر • مدعوم بالذكاء الاصطناعي • الإصدار الأول
+          <div className="border-t border-gray-800/50 pt-8 text-center">
+            <p className="text-gray-500 font-medium">
+              مصمم بعناية للطلاب الجزائريين • مدعوم بأحدث تقنيات الذكاء الاصطناعي • الإصدار الأول
             </p>
           </div>
         </div>
